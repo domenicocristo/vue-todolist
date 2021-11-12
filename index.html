@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Tobolist</title>
+</head>
+<body>
+    <div id="container">
+        <input type="text" v-model="newTask.text" @keyup.enter="addTask" placeholder="Insert task">
+        <button @click="addTask">Add Task</button>
+
+        <div v-if="tasks.length === 0">La lista è vuota</div>
+        <ul v-else>
+            <li v-for="task, i in tasks" :key="i">{{task.text}}<span @click="lineTask" class="fas fa-check"></span><span @click="removeTask" class="far fa-trash-alt"></span></li>
+        </ul>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+    <script src="script.js"></script>
+</body>
+</html>
