@@ -51,9 +51,6 @@ var tobolist = new Vue (
                     this.newTask = "";
                 }
             },
-            lineTask() {
-                this.tasks.done = "true";
-            }
         }
     }
 );
