@@ -43,7 +43,7 @@ var tobolist = new Vue (
         },
         methods: { 
             removeTask(index) {
-                this.tasks.splice(index,1);
+                this.tasks.splice(index, 1);
             },
             addTask() {
                 if (this.newTask !== '') {
@@ -51,8 +51,8 @@ var tobolist = new Vue (
                     this.newTask = "";
                 }
             },
-            lineTask(index) {
-                this.task.done = "true";
+            lineTask() {
+                this.tasks.done = "true";
             }
         }
     }
